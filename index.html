@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">NFL Trivia Game</h1>
+            <p class="lead">Answer all the questions in time</p>
+        </div>
+    </div>
+    <div id="timer" class="col-md-10">
+        <p>Timer: 60 seconds</p>>
+    </div>
+    <div id="questions" class="col-md-10">
+        <form>
+            <p class="font-weight-bold">Which team has won the most Super Bowls</p>
+            <div class="form-check form-check-inline" id="q1">
+                <input class="form-check-input" type="radio" id="inlineradio1" value="Packers" name="q1">
+                <label class="form-check-label" for="inlineradio1">Packers</label>
+                <input class="form-check-input" type="radio" id="inlineradio2" value="Steelers" name="q1">
+                <label class="form-check-label" for="inlineradio2">Steelers</label>
+                <input class="form-check-input" type="radio" id="inlineradio3" value="49" name="q1">
+                <label class="form-check-label" for="inlineradio3">49'ers</label>
+                <input class="form-check-input" type="radio" id="inlineradio4" value="Patriots" name="q1">
+                <label class="form-check-label" for="inlineradio4">Patriots</label>
+            </div>
+            <p class="font-weight-bold">Which player has won the most NFL MVP's</p>
+            <div class="form-check form-check-inline" id="q2">
+                <input class="form-check-input" type="radio" id="inlineradio5" value="TB" name="q2">
+                <label class="form-check-label" for="inlineradio5">Tom Brady</label>
+                <input class="form-check-input" type="radio" id="inlineradio6" value="JR" name="q2">
+                <label class="form-check-label" for="inlineradio6">Jerry Rice</label>
+                <input class="form-check-input" type="radio" id="inlineradio7" value="RM" name="q2">
+                <label class="form-check-label" for="inlineradio7">Randy Moss</label>
+                <input class="form-check-input" type="radio" id="inlineradio8" value="PM" name="q2">
+                <label class="form-check-label" for="inlineradio8">Peyton Manning</label>
+            </div>
+            <p class="font-weight-bold">Which team has no logo on their helmets</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio9" value="Packers" name="q3">
+                <label class="form-check-label" for="inlineradio9">Packers</label>
+                <input class="form-check-input" type="radio" id="inlineradio10" value="Browns" name="q3">
+                <label class="form-check-label" for="inlineradio10">Browns</label>
+                <input class="form-check-input" type="radio" id="inlineradio11" value="Steelers" name="q3">
+                <label class="form-check-label" for="inlineradio11">Steelers</label>
+                <input class="form-check-input" type="radio" id="inlineradio12" value="Chargers" name="q3">
+                <label class="form-check-label" for="inlineradio12">Chargers</label>
+            </div>
+            <p class="font-weight-bold">Who was the first overall pick in the 2011 NFL Draft</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio13" value="CN" name="q4">
+                <label class="form-check-label" for="inlineradio13">Cam Newton</label>
+                <input class="form-check-input" type="radio" id="inlineradio14" value="JC" name="q4">
+                <label class="form-check-label" for="inlineradio14">Jadaveon Clowney</label>
+                <input class="form-check-input" type="radio" id="inlineradio15" value="AJ" name="q4">
+                <label class="form-check-label" for="inlineradio15">AJ Green</label>
+                <input class="form-check-input" type="radio" id="inlineradio16" value="VM" name="q4">
+                <label class="form-check-label" for="inlineradio16">Von Miller</label>
+            </div>
+            <p class="font-weight-bold">How many players are on the NFL field at once</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio17" value="11" name="q5">
+                <label class="form-check-label" for="inlineradio17">11</label>
+                <input class="form-check-input" type="radio" id="inlineradio18" value="20" name="q5">
+                <label class="form-check-label" for="inlineradio18">20</label>
+                <input class="form-check-input" type="radio" id="inlineradio19" value="22" name="q5">
+                <label class="form-check-label" for="inlineradio19">22</label>
+                <input class="form-check-input" type="radio" id="inlineradio20" value="10" name="q5">
+                <label class="form-check-label" for="inlineradio20">10</label>
+            </div>
+            <p class="font-weight-bold">How many points is a touchdown worth</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio21" value="4" name="q6">
+                <label class="form-check-label" for="inlineradio21">4</label>
+                <input class="form-check-input" type="radio" id="inlineradio22" value="7" name="q6">
+                <label class="form-check-label" for="inlineradio22">7</label>
+                <input class="form-check-input" type="radio" id="inlineradio23" value="3" name="q6">
+                <label class="form-check-label" for="inlineradio23">3</label>
+                <input class="form-check-input" type="radio" id="inlineradio24" value="6" name="q6">
+                <label class="form-check-label" for="inlineradio24">6</label>
+            </div>
+            <p class="font-weight-bold">What NFL stadium holds the most spectators</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio25" value="NY" name="q7">
+                <label class="form-check-label" for="inlineradio25">NY Giants</label>
+                <input class="form-check-input" type="radio" id="inlineradio26" value="D" name="q7">
+                <label class="form-check-label" for="inlineradio26">Dallas Cowboys</label>
+                <input class="form-check-input" type="radio" id="inlineradio27" value="GB" name="q7">
+                <label class="form-check-label" for="inlineradio27">Green Bay Packers</label>
+                <input class="form-check-input" type="radio" id="inlineradio28" value="WR" name="q7">
+                <label class="form-check-label" for="inlineradio28">Washington Redskins</label>
+            </div>
+            <p class="font-weight-bold">What is the nickname for a football</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineradio29" value="Egg" name="q8">
+                <label class="form-check-label" for="inlineradio29">Egg</label>
+                <input class="form-check-input" type="radio" id="inlineradio30" value="LB" name="q8">
+                <label class="form-check-label" for="inlineradio30">Leather Ball</label>
+                <input class="form-check-input" type="radio" id="inlineradio31" value="Pig" name="q8">
+                <label class="form-check-label" for="inlineradio31">Pigskin</label>
+                <input class="form-check-input" type="radio" id="inlineradio32" value="RB" name="q8">
+                <label class="form-check-label" for="inlineradio32">Roundball</label>
+            </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit" id="submit">
+    </form>
+    <div id="results" class = "col-md-10">
+        <h3 id="amtCorrect">Correct Answers</h3>
+        <h3 id="amtWrong">Incorrect Answers</h3>
+        <h3 id="amtUnanswered">Unanswered Questions</h3>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        timer()
+        function hideResults() {
+            var results = $("#results");
+            results.hide()
+        }
+        hideResults()
+        function hideForm() {
+            var form = $("#questions");
+            form.hide()
+        }
+        function showResults() {
+            var results = $("#results");
+            results.show()
+        }
+        function calculateFunction(){
+            event.preventDefault();
+            var correctArray = ["Steelers", "PM", "Browns", "CN", "22", "6", "D", "Pig"]
+            var answerArray = [];
+            var correct = 0;
+            var incorrect = 0;
+            var unanswered = 0;
+            hideForm()
+            //get the input
+            var q1 = $("input[name='q1']:checked").val()
+            answerArray.push(q1)
+            var q2 = $("input[name='q2']:checked").val()
+            answerArray.push(q2)
+            var q3 = $("input[name='q3']:checked").val()
+            answerArray.push(q3)
+            var q4 = $("input[name='q4']:checked").val()
+            answerArray.push(q4)
+            var q5 = $("input[name='q5']:checked").val()
+            answerArray.push(q5)
+            var q6 = $("input[name='q6']:checked").val()
+            answerArray.push(q6)
+            var q7 = $("input[name='q7']:checked").val()
+            answerArray.push(q7)
+            var q8 = $("input[name='q8']:checked").val()
+            answerArray.push(q8)
+            console.log(answerArray)
+            console.log(q2)
+            //check our input answers versus the correct answers
+            for (i = 0; i < correctArray.length; i++) {
+                if (answerArray[i] === correctArray[i]) {
+                    correct++
+                } else if (answerArray[i] === undefined) {
+                    unanswered++
+                } else {
+                    incorrect++
+                }
+            }
+            console.log("correct: " + correct);
+            console.log("incorrect: " + incorrect);
+            console.log("unanswered: " + unanswered)
+            $("#amtCorrect").text("Correct Answers: " + correct)
+            $("#amtWrong").text("Incorrect Answers: " + incorrect)
+            $("#amtUnanswered").text("Unanswered: " + unanswered)
+            showResults()
+            clearInterval(counter);
+        }
+        $("#submit").on("click", calculateFunction);
+        var count = 60;
+        var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+        function timer() {
+            count = count - 1;
+            $("#timer").text("Timer: " + count + " seconds remaining")
+            if (count <= 0) {
+                console.log(count)
+                clearInterval(counter);
+                var correctArray = ["Steelers", "PM", "Browns", "CN", "22", "6", "D", "Pig"]
+                var answerArray = [];
+                var correct = 0;
+                var incorrect = 0;
+                var unanswered = 0;
+                hideForm()
+                //get the input
+                var q1 = $("input[name='q1']:checked").val()
+                answerArray.push(q1)
+                var q2 = $("input[name='q2']:checked").val()
+                answerArray.push(q2)
+                var q3 = $("input[name='q3']:checked").val()
+                answerArray.push(q3)
+                var q4 = $("input[name='q4']:checked").val()
+                answerArray.push(q4)
+                var q5 = $("input[name='q5']:checked").val()
+                answerArray.push(q5)
+                var q6 = $("input[name='q6']:checked").val()
+                answerArray.push(q6)
+                var q7 = $("input[name='q7']:checked").val()
+                answerArray.push(q7)
+                var q8 = $("input[name='q8']:checked").val()
+                answerArray.push(q8)
+                console.log(answerArray)
+                console.log(q2)
+                //check our input answers versus the correct answers
+                for (i = 0; i < correctArray.length; i++) {
+                    if (answerArray[i] === correctArray[i]) {
+                        correct++
+                    } else if (answerArray[i] === undefined) {
+                        unanswered++
+                    } else {
+                        incorrect++
+                    }
+                }
+                console.log("correct: " + correct);
+                console.log("incorrect: " + incorrect);
+                console.log("unanswered: " + unanswered)
+                $("#amtCorrect").text("Correct Answers: " + correct)
+                $("#amtWrong").text("Incorrect Answers: " + incorrect)
+                $("#amtUnanswered").text("Unanswered: " + unanswered)
+                showResults()
+                }
+        }
+        timer()
+    </script>
+
+</body>
+
+</html>
